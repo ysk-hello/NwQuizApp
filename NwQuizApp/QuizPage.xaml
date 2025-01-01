@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NwQuizApp.QuizPage"
+             xmlns:control="clr-namespace:NwQuizApp.Controls"
+             Title="QuizPage">
+    <ScrollView>
+        <VerticalStackLayout Margin="10">
+            <!--判定-->
+            <control:ResultView x:Name="resultView" IsVisible="False"></control:ResultView>
+
+            <!--問題文-->
+            <HorizontalStackLayout Margin="10">
+                <Label x:Name="noLabel" FontSize="25" FontAttributes="Bold" Margin="0, 0, 10, 0" />
+                <Label x:Name="questionLabel" Text="" FontSize="25"/>
+            </HorizontalStackLayout>
+
+            <!--選択肢-->
+            <control:OptionView x:Name="answer1" ButtonText="ア" ButtonClicked="answerButton_Clicked"></control:OptionView>
+            <control:OptionView x:Name="answer2" ButtonText="イ" ButtonClicked="answerButton_Clicked"></control:OptionView>
+            <control:OptionView x:Name="answer3" ButtonText="ウ" ButtonClicked="answerButton_Clicked"></control:OptionView>
+            <control:OptionView x:Name="answer4" ButtonText="エ" ButtonClicked="answerButton_Clicked"></control:OptionView>
+
+            <!--ボタン-->
+            <HorizontalStackLayout Margin="10, 30">
+                <Button x:Name="NextPageButton" Text="Next Page" Clicked="NextPageButton_Clicked" Margin="10"></Button>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
