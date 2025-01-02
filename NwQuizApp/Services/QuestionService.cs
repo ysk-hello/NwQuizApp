@@ -5,9 +5,11 @@ namespace NwQuizApp.Services
 {
     public class QuestionService
     {
-        public async Task<List<Question>> LoadQuestionsAsync()
+        public async Task<List<Question>> LoadQuestionsAsync(string year)
         {
-            using var stream = await FileSystem.OpenAppPackageFileAsync("questions.json");
+            var fileName = $"questions_{year}.json";
+
+            using var stream = await FileSystem.OpenAppPackageFileAsync(fileName);
             using var reader = new StreamReader(stream);
             var json = await reader.ReadToEndAsync();
             return JsonSerializer.Deserialize<List<Question>>(json) ?? new List<Question>();

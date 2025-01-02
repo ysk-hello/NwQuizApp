@@ -28,6 +28,10 @@
             {
                 await Navigation.PushAsync(new QuizPage("令和3年"));
             }
+            else if (button.Text == "R01")
+            {
+                await Navigation.PushAsync(new QuizPage("令和1年"));
+            }
         }
     }
 }

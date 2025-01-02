@@ -9,7 +9,10 @@ namespace NwQuizApp.Models
 
         [JsonPropertyName("question")]
         public string? QuestionText { get; set; }
-        
+
+        [JsonPropertyName("image")]
+        public string? QuestionImage { get; set; }
+
         [JsonPropertyName("options")]
         public List<string>? Options { get; set; }
         

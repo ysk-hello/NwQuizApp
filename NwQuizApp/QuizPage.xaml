@@ -10,10 +10,13 @@
             <control:ResultView x:Name="resultView" IsVisible="False"></control:ResultView>
 
             <!--問題文-->
-            <HorizontalStackLayout Margin="10">
-                <Label x:Name="noLabel" FontSize="25" FontAttributes="Bold" Margin="0, 0, 10, 0" />
-                <Label x:Name="questionLabel" Text="" FontSize="25"/>
-            </HorizontalStackLayout>
+            <VerticalStackLayout>
+                <HorizontalStackLayout Margin="10">
+                    <Label x:Name="noLabel" FontSize="25" FontAttributes="Bold" Margin="0, 0, 10, 0" />
+                    <Label x:Name="questionLabel" Text="" FontSize="25" LineBreakMode="WordWrap" />
+                </HorizontalStackLayout>
+                <Image x:Name="questionImage" Margin="10"></Image>
+            </VerticalStackLayout>
 
             <!--選択肢-->
             <control:OptionView x:Name="answer1" ButtonText="ア" ButtonClicked="answerButton_Clicked"></control:OptionView>

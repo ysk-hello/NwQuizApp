@@ -13,19 +13,18 @@ public partial class QuizPage : ContentPage
     private QuizPage()
 	{
 		InitializeComponent();
-
-        Init();
     }
 
     public QuizPage(string year) : this()
     {
         this.Title = year;
+        Init(year);
     }
 
-    private async void Init()
+    private async void Init(string year)
     {
         var service = new QuestionService();
-        _questions = await service.LoadQuestionsAsync();
+        _questions = await service.LoadQuestionsAsync(year);
 
         InitUI();
     }
@@ -41,6 +40,10 @@ public partial class QuizPage : ContentPage
 
         noLabel.Text = $"–â{_questions[_count].No}";
         questionLabel.Text = _questions[_count].QuestionText;
+        questionLabel.WidthRequest = this.Width - 300;
+
+        questionImage.HeightRequest = (_questions[_count].QuestionImage == null) ? 0 : 200;
+        questionImage.Source = _questions[_count].QuestionImage;
 
         answer1.QuestionText = _questions[_count].Options[0];
         answer2.QuestionText = _questions[_count].Options[1];
@@ -59,6 +62,7 @@ public partial class QuizPage : ContentPage
 
         if (_count == _questions.Count())
         {
+            await DisplayAlert("‚¨‚µ‚Ü‚¢", "‚¨”æ‚ê—l‚Å‚µ‚½", "OK");
             await Shell.Current.GoToAsync("//MainPage");
             return;
         }

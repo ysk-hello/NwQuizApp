@@ -57,7 +57,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Raw\questions.json" />
+	  <None Remove="Resources\Raw\questions_令和1年.json" />
+	  <None Remove="Resources\Raw\questions_令和3年.json" />
+	  <None Remove="Resources\Raw\questions_令和4年.json" />
+	  <None Remove="Resources\Raw\questions_令和5年.json" />
+	  <None Remove="Resources\Raw\questions_令和6年.json" />
+	  <None Remove="Resources\Raw\R06\Q03.png" />
+	  <None Remove="Resources\Raw\R06\Q05.png" />
+	  <None Remove="Resources\Raw\R06\Q12.png" />
+	  <None Remove="Resources\Raw\R06\Q23.png" />
+	  <None Remove="Resources\Raw\template.json" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -73,6 +82,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiAsset Update="Resources\Raw\questions_令和5年.json">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Update="Resources\Raw\questions_令和4年.json">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Update="Resources\Raw\questions_令和3年.json">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Update="Resources\Raw\questions_令和1年.json">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Update="Resources\Raw\template.json">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Controls\OptionView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -82,6 +109,13 @@
 	  <MauiXaml Update="QuizPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Resources\Raw\R03\" />
+	  <Folder Include="Resources\Raw\R04\" />
+	  <Folder Include="Resources\Raw\R05\" />
+	  <Folder Include="Resources\Raw\R01\" />
 	</ItemGroup>
 
 </Project>

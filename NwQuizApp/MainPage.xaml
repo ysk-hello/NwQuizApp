@@ -8,6 +8,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -18,6 +19,8 @@
             <Button x:Name="R05" Text="R05" Grid.Row="0" Grid.Column="1" Margin="10" Clicked="Button_Clicked"></Button>
             <Button x:Name="R04" Text="R04" Grid.Row="1" Grid.Column="0" Margin="10" Clicked="Button_Clicked"></Button>
             <Button x:Name="R03" Text="R03" Grid.Row="1" Grid.Column="1" Margin="10" Clicked="Button_Clicked"></Button>
+            <Button x:Name="R02" Text="R02" Grid.Row="2" Grid.Column="0" Margin="10" Clicked="Button_Clicked" IsEnabled="False"></Button>
+            <Button x:Name="R01" Text="R01" Grid.Row="2" Grid.Column="1" Margin="10" Clicked="Button_Clicked"></Button>
         </Grid>
     </StackLayout>
 </ContentPage>

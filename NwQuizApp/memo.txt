@@ -1,0 +1,12 @@
+﻿図表を挿入する
+
+PDFを画像化する
+Azureを使って画像からテキストを抽出する、OCR
+OpenAI APIを使って問題を解く、Microsoftアカウント
+　OpenAI APIを使って解説文を生成する→あとで修正する、参考書
+解説文を挿入する
+
+画面から問題文をメンテナンスできると良い
+JSON→Excel、Excel→JSON
+
+
